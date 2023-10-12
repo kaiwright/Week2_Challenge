@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en-gb">
-
-<head>
+<html lang="en-gb"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Kai Wright // Web Developer</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -25,7 +23,7 @@
           <a href="contact">Contact Me</a>
         </li>
         <li>
-          <a href="documents/Kai Wright CV.pdf" attributes-list download>Resume</a>
+          <a href="documents/Kai Wright CV.pdf" attributes-list="" download="">Resume</a>
         </li>
       </ul>
     </nav>
@@ -40,21 +38,24 @@
   </section>
 
   <main class="page-wrapper">
+  
+  <section id="pageGrid" class="pageGridArea">
+
     <!-- about me -->
     <section class="page-section" id="about">
-      <h2>About Me</h2>
-      <p>
-        About me text here
-      </p>
+      <h2 class="left-content" id="about-header">About Me</h2>
+         <p class="right-content" id="about-text">
+           About me text here
+         </p>
     </section>
 
     <!-- portfolio container -->
     <section class="page-section" id="work">
-      <section id="portfolioGrid" class="portfolioGridArea"></section>
-      <h2>Work</h2>
+      <!-- <section id="portfolioGrid" class="portfolioGridArea"></section> -->
+      <h2 class="left-content" id="work-header">Work</h2>
     </section>
 
-    <section id="portfolioGrid">
+    <section id="portfolioGrid" class="right-content">
       <div id="webpage1" class="portfolioGridArea">
         <div class="heading">Webpage 1</div>
       </div>
@@ -73,13 +74,16 @@
     </section>
 
     <!-- contact -->
-    <section class="page-section contact" id="contact">
-      <h2>Contact Me</h2>
-      <p>
-        <li>Contact info</li>
-      </p>
-    </section>
-  </main>
-</body>
+    <section class="page-section" id="contact">
+      <h2 class="left-content" id="contact-header">Contact Me</h2>
+      <ul class="right-content" id="contact-text">
+        <li>Contact info 1</li>
+        <li>Contact info 2</li>
+        <li>Contact info 3</li>
+      </ul>
 
-</html>
+    </section>
+
+  </section></main>
+  
+</body></html>
