@@ -6,6 +6,8 @@
 
 .header {
   background-color: darkslategray;
+  line-height: 1.5;
+  /* flex: none; */
 }
 
 .header h1 {
@@ -21,30 +23,41 @@
   margin-right: 20px;
   float: right;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .header nav ul {
   list-style-type: none;
+  line-height: 0.5;
 }
 
 .header nav ul li {
   display: inline-block;
   margin-left: 25px;
 }
+.header nav ul li a {
+  color: aqua;
+  text-decoration: none;
+  border-bottom: solid 3px aqua;
+  
+}
 
 /*banner styling */
 .hero-banner {
   display: block;
-  background-color: aquamarine;
+  background-color: grey;
   min-height: 500px;
 }
 
 .hero-banner div {
-  background-color: blueviolet;
-  display: inline-block;
-  float: right;
-  margin-right: 25px;
+  background-color: aqua;
+  position: absolute;
+  top: 45%;
+  right: 3%;
+  width: 400px;
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
 }
 
 /* body styling */
@@ -52,7 +65,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.5;
+  /* flex-direction: column; */
 }
 
 h1,
@@ -69,16 +82,18 @@ p {
 }
 
 #portfolioGrid {
+  grid-area: portfolioGridArea;
   gap: 10px;
-  float: right;
   margin: 2%;
+  margin-top: 100px;
   display: grid;
-  min height: 500px;
+  min-height: 500px;
   min-width: 500px;
   height: 70vh;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas:
+  "webpage1 webpage1 webpage1 webpage1"
   "webpage1 webpage1 webpage1 webpage1"
   "webpage2 webpage2 webpage3 webpage3"
   "webpage4 webpage4 webpage5 webpage5";
@@ -87,30 +102,91 @@ p {
 .portfolioGridArea {
   display: flex;
   position: relative;
+  background-color: grey
 }
 
 #webpage1 {
-  background-color: red;
   grid-area: webpage1;
+  border: solid 5px aqua
 }
 
 #webpage2 {
-  background-color: orange;
   grid-area: webpage2;
+  border: solid 5px aqua
 }
 
 #webpage3 {
-  background-color: yellow;
   grid-area: webpage3;
+  border: solid 5px aqua
 }
 
 #webpage4 {
-  background-color: green;
   grid-area: webpage4;
+  border: solid 5px aqua
 }
 
 #webpage5 {
-  background-color: blue;
   grid-area: webpage5;
+  border: solid 5px aqua
 }
 
+.left-content {
+  display: block;
+  flex-direction: column;
+  position: relative;
+  float: left;
+  width: 30%;
+  border-right: 5px solid darkslategray;
+  color: darkslategray;
+  font-size: 40pt;
+}
+
+
+.right-content {
+  display: block;
+  position: relative;
+  float: right;
+  width: 65%;
+}
+
+#contact {
+  list-style-type: none;
+}
+
+#contact ul li {
+  display: inline-flex;
+  justify-content: space-between;
+  margin-left: 100px;
+}
+
+#about-header {
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 195px;
+  block-size: 100px;
+  max-width: 200px;
+}
+
+#work-header {
+  position: absolute;
+  margin-top: 220px;
+  margin-left: 195px;
+  block-size: 680px;
+  max-width: 200px;
+}
+
+#contact-header {
+  position: absolute;
+  margin-top: 1000px;
+  margin-left: 195px;
+  block-size: 100px;
+  max-width: 200px;
+}
+
+#about-text {
+  margin-top: 100px;
+}
+
+#contact-text {
+  margin-top: 100px;
+}
