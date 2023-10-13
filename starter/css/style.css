@@ -7,15 +7,15 @@
 .header {
   background-color: darkslategray;
   line-height: 1.5;
-  /* flex: none; */
 }
 
 .header h1 {
   display: inline-block;
   font-size: 48px;
-  background-color: aqua;
+  background-color: rgb(34, 61, 61);
   padding-right: 20px;
   padding-left: 20px;
+  color: whitesmoke;
 }
 
 .header nav {
@@ -35,45 +35,43 @@
   display: inline-block;
   margin-left: 25px;
 }
+
 .header nav ul li a {
-  color: aqua;
+  color: whitesmoke;
   text-decoration: none;
-  border-bottom: solid 3px aqua;
-  
+  border-bottom: solid 3px whitesmoke;
+  right: 2%;
 }
+
 
 /*banner styling */
 .hero-banner {
   display: block;
-  background-color: grey;
+  background: url("../images/art\ station\ bg.png");
   min-height: 500px;
 }
 
 .hero-banner div {
-  background-color: aqua;
+  background-color: darkslategray;
+  color: whitesmoke;
   position: absolute;
   top: 45%;
-  right: 3%;
+  right: 2%;
   width: 400px;
   height: 70px;
   text-align: center;
   line-height: 70px;
 }
 
+
 /* body styling */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  /* flex-direction: column; */
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
@@ -100,47 +98,64 @@ p {
 }
 
 .portfolioGridArea {
-  display: flex;
-  position: relative;
-  background-color: grey
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+  font-size: 15pt;
+  padding: 10px;
 }
 
+.portfolioGridArea div {
+  background-color: darkslategray;
+  color: whitesmoke;
+  width: fit-content;
+  padding: 10px;
+}
 #webpage1 {
   grid-area: webpage1;
-  border: solid 5px aqua
+  border: solid 5px darkslategray;
+  background-image: url("../images/coming\ soon.png");
 }
 
 #webpage2 {
   grid-area: webpage2;
-  border: solid 5px aqua
+  border: solid 5px darkslategray;
+  background-image: url("../images/coming\ soon.png");
 }
 
 #webpage3 {
   grid-area: webpage3;
-  border: solid 5px aqua
+  border: solid 5px darkslategray;
+  background-image: url("../images/coming\ soon.png");
 }
 
 #webpage4 {
   grid-area: webpage4;
-  border: solid 5px aqua
+  border: solid 5px darkslategray;
+  background-image: url("../images/coming\ soon.png");
 }
 
 #webpage5 {
   grid-area: webpage5;
-  border: solid 5px aqua
+  border: solid 5px darkslategray;
+  background-image: url("../images/coming\ soon.png");
 }
 
 .left-content {
-  display: block;
+  display: inline-block;
+  align-items: center;
   flex-direction: column;
   position: relative;
-  float: left;
+  margin-top: 100px;
   width: 30%;
   border-right: 5px solid darkslategray;
   color: darkslategray;
   font-size: 40pt;
 }
-
 
 .right-content {
   display: block;
@@ -149,44 +164,86 @@ p {
   width: 65%;
 }
 
-#contact {
+#contact section ul li {
+  display: inline-block;
+  margin-left: 100px;
+  margin-bottom: 100px;
+  color: darkslategray;
+
   list-style-type: none;
 }
 
-#contact ul li {
-  display: inline-flex;
-  justify-content: space-between;
-  margin-left: 100px;
+#contact section ul li a {
+  color: darkslategray;
+  text-decoration: none;
+  right: 2%;
+  font-size: 20pt;
 }
 
 #about-header {
-  position: absolute;
-  margin-top: 100px;
   margin-left: 195px;
   block-size: 100px;
   max-width: 200px;
 }
 
 #work-header {
-  position: absolute;
-  margin-top: 220px;
   margin-left: 195px;
   block-size: 680px;
   max-width: 200px;
 }
 
 #contact-header {
-  position: absolute;
-  margin-top: 1000px;
-  margin-left: 195px;
+  margin-left: 143px;
   block-size: 100px;
-  max-width: 200px;
+  max-width: 250px;
+  padding-right: 10px;
 }
 
 #about-text {
   margin-top: 100px;
 }
 
-#contact-text {
-  margin-top: 100px;
+#contact {
+  block-size: 100px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .header nav {
+    display: none;
+  }
+
+  #portfolioGrid {
+    grid-template-areas:
+    "webpage1 webpage1 webpage1 webpage1"
+    "webpage1 webpage1 webpage1 webpage1"
+    "webpage2 webpage2 webpage3 webpage3"
+    "webpage4 webpage4 webpage5 webpage5";
+}
+
+@media only screen and (max-width: 600px) {
+  #header {
+    position: static;
+    margin: 20px;
+  }
+
+  }
+  #portfolioGrid {
+    grid-template-rows: 100px 100px 100px 100px 100px 100px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "webpage1"
+      "webpage1"
+      "webpage2"
+      "webpage3"
+      "webpage4"
+      "webpage5"
+    ;
+  }
+
+  .left-content {
+    border-right: none;
+    border-bottom: 5px solid darkslategray;
+    block-size: 150px !important;
+    width: 100%;
+  }
 }
