@@ -13,9 +13,9 @@ Link: https://kaiwright.github.io/Week2_Challenge/
 
 The website deploys from the link above. All navigations links take the user to the corresponding section, and the 'Resume' button downloads a copy of my CV.  
 
-![ Picture of the first section of Porfolio website](starter/images/portfolioWebsitePic1.PNG)
+![ Picture of the first section of Porfolio website](../images/portfolioWebsitePic1.PNG)
 
-![ Picture of the second section of Portfolio website](starter/images/portfolioWebsitePic2.PNG)
+![ Picture of the second section of Portfolio website](../images/portfolioWebsitePic2.PNG)
 
 ## License
 
